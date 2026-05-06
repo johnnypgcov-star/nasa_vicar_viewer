@@ -1,0 +1,17 @@
+services:
+  vicar-viewer:
+    build: .
+    container_name: nasa-vicar-viewer
+    ports:
+      - "85:85"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - "J:/:/data/J:ro"
+      - vicar_config:/config
+    tmpfs:
+      - /tmp/vicar_cache:size=512m
+
+volumes:
+  vicar_config:

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASA VICAR Viewer — Voyager 1 &amp; 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛸</text></svg>" />
+</head>
+<body>
+  <div id="stars"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🛸</span>
+        <div>
+          <h1>VICAR Viewer</h1>
+          <p class="subtitle">Voyager 1 &amp; 2 — NASA Planetary Data</p>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <button class="nav-btn active" data-view="browse" onclick="showView('browse')">Browse NASA</button>
+        <button class="nav-btn" data-view="local" onclick="showView('local')">Local Files</button>
+        <button class="nav-btn" data-view="upload" onclick="showView('upload')">Upload VICAR</button>
+        <button class="nav-btn" data-view="about" onclick="showView('about')">About</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BROWSE VIEW -->
+  <main id="view-browse" class="view active">
+    <aside class="sidebar">
+      <div class="filter-section">
+        <label class="filter-label">Spacecraft</label>
+        <div class="btn-group" id="spacecraft-filter">
+          <button class="filter-btn active" data-val="both">Both</button>
+          <button class="filter-btn" data-val="Voyager 1">Voyager 1</button>
+          <button class="filter-btn" data-val="Voyager 2">Voyager 2</button>
+        </div>
+      </div>
+
+      <div class="filter-section">
+        <label class="filter-label">Target</label>
+        <select id="target-select" class="select-input">
+          <option value="all">All Targets</option>
+          <optgroup label="Gas Giants">
+            <option value="jupiter">Jupiter</option>
+            <option value="saturn">Saturn</option>
+            <option value="uranus">Uranus</option>
+            <option value="neptune">Neptune</option>
+          </optgroup>
+          <optgroup label="Jupiter Moons">
+            <option value="io">Io</option>
+            <option value="europa">Europa</option>
+            <option value="ganymede">Ganymede</option>
+            <option value="callisto">Callisto</option>
+          </optgroup>
+          <optgroup label="Saturn Moons">
+            <option value="titan">Titan</option>
+          </optgroup>
+          <optgroup label="Uranus / Neptune Moons">
+            <option value="miranda">Miranda</option>
+            <option value="ariel">Ariel</option>
+            <option value="umbriel">Umbriel</option>
+            <option value="titania">Titania</option>
+            <option value="oberon">Oberon</option>
+            <option value="triton">Triton</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <button class="search-btn" onclick="runSearch(1)">Search</button>
+
+      <div class="stats-box" id="stats-box" style="display:none">
+        <div class="stat"><span id="stat-total">0</span><small>images found</small></div>
+        <div class="stat"><span id="stat-page">1</span><small>of <span id="stat-pages">1</span></small></div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div id="loading" class="loading" style="display:none">
+        <div class="spinner"></div>
+        <p>Fetching data from NASA OPUS…</p>
+      </div>
+      <div id="error-msg" class="error-msg" style="display:none"></div>
+      <div id="image-grid" class="image-grid"></div>
+      <div id="pagination" class="pagination" style="display:none">
+        <button id="btn-prev" onclick="changePage(-1)">← Prev</button>
+        <span id="page-label"></span>
+        <button id="btn-next" onclick="changePage(1)">Next →</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- LOCAL FILES VIEW -->
+  <main id="view-local" class="view local-view" style="display:none">
+    <!-- Folder tree -->
+    <aside class="local-tree-panel">
+      <div class="local-tree-header">
+        <div class="local-root-display" id="local-root-display">
+          <span class="local-root-label" id="local-root-label">📂 Loading…</span>
+          <button class="root-edit-btn" onclick="togglePathEdit()" title="Change root path">✏</button>
+        </div>
+        <div class="local-root-edit" id="local-root-edit" style="display:none">
+          <input type="text" id="local-root-input" class="root-path-input" placeholder="e.g. J:\ASTRONOMY" />
+          <button class="root-save-btn" onclick="saveRootPath()">Save</button>
+          <button class="root-cancel-btn" onclick="togglePathEdit()">✕</button>
+        </div>
+      </div>
+      <div id="local-tree" class="local-tree"></div>
+    </aside>
+
+    <!-- File list -->
+    <section class="local-files-panel">
+      <div class="local-files-header" id="local-files-header">
+        <span id="local-path-display" class="local-path-crumb">Select a folder</span>
+      </div>
+      <div id="local-file-list" class="local-file-list">
+        <div class="local-empty">Select a folder from the tree to browse its .IMG files</div>
+      </div>
+    </section>
+
+    <!-- VICAR viewer -->
+    <section class="local-viewer-panel" id="local-viewer-panel">
+      <div class="local-viewer-empty" id="local-viewer-empty">
+        <span style="font-size:3rem">🔭</span>
+        <p>Select a .IMG file to view</p>
+      </div>
+      <div id="local-viewer-content" style="display:none">
+        <div id="local-img-loading" class="loading" style="display:none">
+          <div class="spinner"></div>
+          <p id="local-loading-msg">Parsing file…</p>
+        </div>
+        <!-- Image viewer (VICAR/PDS3/PDS4/JPEG/GIF) -->
+        <div id="local-img-wrap" class="local-img-wrap" style="display:none">
+          <img id="local-vicar-img" src="" alt="" />
+        </div>
+        <!-- Text viewer (LBL / TAB / CAT / ASC / TXT) -->
+        <div id="local-text-wrap" class="local-text-wrap" style="display:none">
+          <div class="text-toolbar">
+            <span id="local-text-label" class="text-format-badge"></span>
+            <span id="local-text-truncated" class="text-truncated-note" style="display:none">⚠ Truncated at 200 KB</span>
+            <button class="text-wrap-btn" onclick="toggleTextWrap()">Wrap</button>
+          </div>
+          <pre id="local-text-content" class="text-viewer"></pre>
+        </div>
+        <!-- Binary / unsupported -->
+        <div id="local-binary-wrap" class="local-viewer-empty" style="display:none">
+          <span style="font-size:2.5rem">🗄️</span>
+          <p id="local-binary-msg"></p>
+        </div>
+        <div id="local-meta-panel" class="metadata-panel"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- UPLOAD VIEW -->
+  <main id="view-upload" class="view" style="display:none">
+    <div class="upload-container">
+      <h2>Upload VICAR File</h2>
+      <p class="upload-desc">Upload a local <code>.IMG</code> or <code>.VIC</code> file to parse and view it.</p>
+      <div class="drop-zone" id="drop-zone">
+        <span class="drop-icon">📡</span>
+        <p>Drop your VICAR file here<br />or click to browse</p>
+        <input type="file" id="file-input" accept=".img,.IMG,.vic,.VIC,.vicar,.xml,.XML,.lbl,.LBL" style="display:none" />
+      </div>
+      <div id="upload-result" style="display:none">
+        <div class="vicar-viewer">
+          <div class="vicar-image-wrap">
+            <img id="upload-image" src="" alt="VICAR image" />
+          </div>
+          <div class="metadata-panel" id="upload-meta"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ABOUT VIEW -->
+  <main id="view-about" class="view" style="display:none">
+    <div class="about-container">
+      <h2>About This Viewer</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>🛸 Voyager Program</h3>
+          <p>NASA's Voyager 1 and 2 spacecraft launched in 1977 and conducted flybys of Jupiter, Saturn, Uranus, and Neptune. Together they captured over 70,000 images of the outer solar system.</p>
+        </div>
+        <div class="about-card">
+          <h3>📁 VICAR Format</h3>
+          <p>VICAR (Video Image Communication And Retrieval) is NASA's standard format for planetary image data. Files contain a text label with metadata followed by raw binary pixel data in BSQ, BIL, or BIP organization.</p>
+        </div>
+        <div class="about-card">
+          <h3>🔭 Data Source</h3>
+          <p>Images are fetched live from NASA's OPUS (Outer Planets Unified Search) system and PDS (Planetary Data System) Imaging Node. All data is in the public domain.</p>
+        </div>
+        <div class="about-card">
+          <h3>⚙️ VICAR Fields</h3>
+          <ul>
+            <li><code>LBLSIZE</code> — label size in bytes</li>
+            <li><code>NL/NS/NB</code> — lines, samples, bands</li>
+            <li><code>FORMAT</code> — pixel type (BYTE, HALF, REAL…)</li>
+            <li><code>ORG</code> — data org (BSQ, BIL, BIP)</li>
+            <li><code>INTFMT</code> — byte order (LOW/HIGH)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="about-credit">Built by John Gilbert &mdash; 2026</p>
+    </div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" style="display:none" onclick="closeLightbox(event)">
+    <div class="lightbox-inner">
+      <button class="lb-close" onclick="closeLightbox()">✕</button>
+      <div class="lb-content">
+        <div class="lb-image-wrap">
+          <img id="lb-image" src="" alt="" />
+          <div id="lb-loading" class="lb-loading" style="display:none">
+            <div class="spinner"></div>
+            <p>Loading VICAR data…</p>
+          </div>
+          <div id="lb-vicar-wrap" style="display:none">
+            <img id="lb-vicar-image" src="" alt="VICAR parsed" />
+          </div>
+        </div>
+        <div class="lb-meta">
+          <h3 id="lb-title">Observation</h3>
+          <div id="lb-info" class="lb-info"></div>
+          <div class="lb-actions">
+            <button class="action-btn" id="lb-vicar-btn" onclick="loadVicarForLightbox()">Load Raw VICAR</button>
+            <a class="action-btn secondary" id="lb-pds-link" href="#" target="_blank" rel="noreferrer">View on OPUS ↗</a>
+          </div>
+          <div id="lb-vicar-meta" class="vicar-meta-table" style="display:none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

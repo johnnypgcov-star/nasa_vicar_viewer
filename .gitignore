@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Cache / temp
+tmp/
+*.tmp
