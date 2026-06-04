@@ -33,11 +33,36 @@ Use web search to gather current, accurate data across all of the following area
 - Seasonal demand factors (tourism peaks, weather, local events)
 - Competition from adjacent entertainment (VR arcades, axe throwing, mini golf, etc.)
 
-### 4. Commercial Real Estate & Location Data
-- Average commercial lease rates (per sq ft) in target cities
-- Ideal venue size (typically 3,000–8,000 sq ft) and availability
-- Notable entertainment districts or high-footfall areas
-- Any enterprise zone incentives or small business grants in the state
+### 4. Commercial Real Estate & Location Data (PRIORITY SECTION — provide maximum detail)
+
+**Hard requirements — discard any property or area that does not meet these:**
+- Minimum 2,000 sq ft (anything below is not suitable and must be excluded from the report)
+- Target range: 3,500–6,000 sq ft to comfortably accommodate 4–6 escape rooms plus supporting spaces
+- Room sizing context: each escape room typically requires 250–400 sq ft; 4–6 rooms therefore needs 1,000–2,400 sq ft of playable space, plus reception/waiting area (400–600 sq ft), GM monitoring station, corridors, bathrooms, storage, and staff areas
+
+**For each of the top recommended cities, provide:**
+- Current average commercial lease rate per sq ft (monthly and annual) — distinguish between Class A, B, and C space
+- What "reasonable" price per sq ft looks like for that specific market vs what would be considered premium/overpriced
+- Specific neighbourhoods, districts, or streets that represent prime locations (high footfall, visibility, passing trade)
+- Proximity factors to prioritise: entertainment districts, restaurants and bars, cinemas, bowling alleys, shopping centres, transport hubs, hotels, tourist attractions
+- Current vacancy rates for suitable commercial space in those areas
+- Any specific properties or developments currently available that match the size criteria (sourced from LoopNet, CoStar, Crexi, or local commercial real estate listings where possible)
+- Parking availability — surface, structured, or street (important for group bookings)
+- Ground floor vs upper floor considerations (ground floor preferred for accessibility and walk-in trade; upper floor may offer lower rates)
+- Loading access for large props, set dressing, and equipment delivery
+- Fit-out considerations: ceiling height (minimum 9ft recommended), column-free floor plans preferred, power supply capacity
+
+**Lease structure intelligence:**
+- Typical lease lengths being offered in this market (3, 5, 10 year terms)
+- Whether landlords in this market are offering rent-free periods or fit-out contributions for quality tenants
+- Triple net (NNN) vs gross lease norms for the state
+- Any tenant improvement allowances typical in this market
+
+**Red flags to flag in the report:**
+- Areas with declining footfall or retail blight
+- Locations where parking is severely limited
+- Markets where commercial rents have spiked unsustainably in the past 2 years
+- Any enterprise zone incentives or small business grants available in the state that could offset real estate costs
 
 ### 5. Regulatory & Operational Environment
 - State business registration requirements
