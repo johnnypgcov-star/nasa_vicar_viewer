@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escape Room Market Research — Scope & Methodology Brief</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #ffffff;
+    color: #2c2c2c;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Cover */
+  .cover {
+    background: #1a1a2e;
+    color: #ffffff;
+    padding: 60px 50px 50px;
+    min-height: 220px;
+  }
+  .cover .label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e94560;
+    margin-bottom: 14px;
+  }
+  .cover h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .cover h1 span { color: #e94560; }
+  .cover .sub {
+    font-size: 15px;
+    color: #b0b8cc;
+    margin-bottom: 28px;
+  }
+  .cover .meta {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 22px;
+    font-size: 13px;
+    color: #9aa3b8;
+  }
+  .cover .meta strong { color: #ffffff; display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
+
+  /* Main layout */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 40px 60px; }
+
+  /* Intro band */
+  .intro-band {
+    background: #f0f4ff;
+    border-left: 4px solid #e94560;
+    padding: 22px 26px;
+    margin: 36px 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 14.5px;
+    color: #2c2c2c;
+  }
+  .intro-band strong { color: #1a1a2e; }
+
+  /* Section cards */
+  .section-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    page-break-inside: avoid;
+  }
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  .section-num {
+    background: #e94560;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.3;
+  }
+  .section-title .badge {
+    display: inline-block;
+    background: #e94560;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .section-title .badge.blue {
+    background: #2563eb;
+  }
+  .section-intro {
+    font-size: 13.5px;
+    color: #555;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  /* Subsections */
+  .subsection {
+    margin-bottom: 18px;
+  }
+  .subsection h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e94560;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  .subsection ul {
+    list-style: none;
+    padding: 0;
+  }
+  .subsection ul li {
+    padding: 4px 0 4px 18px;
+    position: relative;
+    color: #3a3a3a;
+    font-size: 13.5px;
+  }
+  .subsection ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #e94560;
+    font-size: 11px;
+    top: 6px;
+  }
+  .subsection ul li strong {
+    color: #1a1a2e;
+  }
+
+  /* Requirements box */
+  .requirements-box {
+    background: #1a1a2e;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .requirements-box h4 {
+    color: #e94560;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .requirements-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .requirements-box ul li {
+    padding: 4px 0 4px 18px;
+    position: relative;
+    font-size: 13.5px;
+    color: #d0d8e8;
+  }
+  .requirements-box ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e94560;
+    font-size: 12px;
+  }
+  .requirements-box ul li strong { color: #ffffff; }
+
+  /* Flag box */
+  .flag-box {
+    background: #fff8f0;
+    border: 1px solid #ffd0a0;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-top: 14px;
+  }
+  .flag-box h4 {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #c05000;
+    margin-bottom: 8px;
+  }
+  .flag-box ul {
+    list-style: none;
+    padding: 0;
+  }
+  .flag-box ul li {
+    padding: 3px 0 3px 16px;
+    position: relative;
+    font-size: 13px;
+    color: #7a4010;
+  }
+  .flag-box ul li::before {
+    content: "⚑";
+    position: absolute;
+    left: 0;
+    font-size: 11px;
+  }
+
+  /* Output section */
+  .output-section {
+    background: #1a1a2e;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+  }
+  .output-section h3 {
+    color: #e94560;
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .output-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .output-section ul li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    color: #c8d0e0;
+    font-size: 13.5px;
+  }
+  .output-section ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: #e94560;
+    font-size: 9px;
+    top: 8px;
+  }
+  .output-section ul li strong { color: #ffffff; }
+
+  /* TOC */
+  .toc {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin: 30px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .toc h3 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1a2e;
+    margin-bottom: 14px;
+  }
+  .toc ol {
+    padding-left: 20px;
+  }
+  .toc ol li {
+    padding: 4px 0;
+    color: #2c2c2c;
+    font-size: 13.5px;
+  }
+  .toc ol li a {
+    color: #e94560;
+    text-decoration: none;
+  }
+  .toc ol li a:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer {
+    background: #1a1a2e;
+    color: #7a8299;
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin-top: 40px;
+  }
+  footer span { color: #e94560; }
+
+  @media print {
+    .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-num, .requirements-box, .output-section { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-card { box-shadow: none; border: 1px solid #e0e0e0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Cover -->
+<div class="cover">
+  <div class="label">Business Intelligence Research Programme</div>
+  <h1>US Escape Room Market Research<br><span>Scope &amp; Methodology Brief</span></h1>
+  <div class="sub">What our research agent investigates — state by state</div>
+  <div class="meta">
+    <div><strong>Prepared for</strong>Wendy</div>
+    <div><strong>Date</strong>June 2026</div>
+    <div><strong>Coverage</strong>All 50 US States (on demand)</div>
+    <div><strong>Output format</strong>HTML Report → PDF</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Intro -->
+  <div class="intro-band">
+    This document outlines exactly what our AI research agent investigates when commissioned to assess escape room business opportunities in any given US state. Each report is generated fresh using live data, covers six core research areas, and is delivered as a professional HTML document ready for PDF conversion. Reports are addressed to Wendy and include an executive summary, a recommended locations table, and a risks section.
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>Research Areas Covered</h3>
+    <ol>
+      <li><a href="#s1">State Demographics &amp; Market Profile</a> — including inbound tourism and university populations</li>
+      <li><a href="#s2">Escape Room Market Landscape</a> — competitor mapping, saturation, pricing</li>
+      <li><a href="#s3">Business Opportunity Assessment</a> — recommended cities, greenfield markets, tourism &amp; student hotspots</li>
+      <li><a href="#s4">Commercial Real Estate &amp; Location Data</a> — prime sites, lease rates, Wendy's site requirements</li>
+      <li><a href="#s5">Regulatory &amp; Operational Environment</a> — licences, safety codes, grants</li>
+      <li><a href="#s6">Financial Benchmarks</a> — revenue, build costs, break-even</li>
+    </ol>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="section-card" id="s1">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div class="section-title">State Demographics &amp; Market Profile</div>
+    </div>
+    <div class="section-intro">Establishes the fundamental market conditions — who lives there, who visits, and how strong the core escape room audience is before a single venue is assessed.</div>
+
+    <div class="subsection">
+      <h4>Core Demographics</h4>
+      <ul>
+        <li>Total state population and population density</li>
+        <li>Age distribution with specific focus on the <strong>18–45 core escape room demographic</strong></li>
+        <li>Household income levels and disposable income available for leisure spending</li>
+        <li>Urban vs rural split and the top metro areas by population</li>
+        <li>Education levels — used as a proxy for puzzle and experience appetite</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>Inbound Tourism &amp; Visitor Economy <span style="background:#e94560;color:#fff;font-size:10px;padding:1px 7px;border-radius:3px;margin-left:6px;font-weight:700;">KEY INDICATOR</span></h4>
+      <ul>
+        <li>Total annual visitor numbers to the state — <strong>domestic and international figures reported separately</strong></li>
+        <li>Year-on-year tourism trend: growing, flat, or declining</li>
+        <li><strong>Top 10 tourist attractions</strong> in the state ranked by annual visitor numbers — national monuments, parks, historical sites, theme parks, scenic landmarks</li>
+        <li>Which cities and regions capture the highest concentration of tourist traffic</li>
+        <li>Average visitor length of stay and daily spend on activities and entertainment</li>
+        <li>Peak tourist seasons and shoulder seasons mapped against escape room demand potential</li>
+        <li>Visitor demographic breakdown: family groups, couples, solo travellers, corporate and conference visitors</li>
+        <li>Convention and conference activity — major venues, annual events, trade shows (strong corporate group booking indicator)</li>
+        <li>State tourism board positioning data — where escape rooms could feature as a recommended activity</li>
+        <li>Rainy day and indoor activity demand — states with unpredictable weather see elevated demand for indoor entertainment from tourists</li>
+        <li>Cities identified where tourism is the <strong>primary economic driver</strong> — these represent captive audiences actively seeking activities</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>University &amp; College Population <span style="background:#e94560;color:#fff;font-size:10px;padding:1px 7px;border-radius:3px;margin-left:6px;font-weight:700;">KEY INDICATOR</span></h4>
+      <ul>
+        <li>Full list of all universities and colleges in the state with city location and total enrolled student population</li>
+        <li>Top 5 cities ranked by student population concentration</li>
+        <li><strong>Cities where students exceed 10% of the local population are flagged as HIGH OPPORTUNITY markets</strong></li>
+        <li>Campus proximity to city centres — walkable vs car-dependent</li>
+        <li>Student entertainment spending patterns</li>
+        <li>Academic calendar: peak demand periods (semester time) vs low periods (summer, holidays) — revenue planning implications</li>
+        <li>Presence of Greek life (fraternities and sororities) — strong group booking demand indicator</li>
+        <li>Postgraduate and international student population — higher disposable income segment</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section-card" id="s2">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div class="section-title">Escape Room Market Landscape</div>
+    </div>
+    <div class="section-intro">Maps the existing competitive environment across the state — who is already operating, how saturated the market is, and where the gaps are.</div>
+
+    <div class="subsection">
+      <h4>Operator Mapping</h4>
+      <ul>
+        <li>Estimated total number of escape room venues currently operating in the state</li>
+        <li>Split between independent operators and franchise locations</li>
+        <li>Major franchise brands already present: The Escape Game, Breakout, Escapology, Room Escape Adventures, and others</li>
+        <li>Geographic distribution of venues — which cities are well served and which are underserved</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>Market Saturation Analysis</h4>
+      <ul>
+        <li>Venues per capita compared to the national average</li>
+        <li>Identification of cities with clear supply gaps relative to population</li>
+        <li>Assessment of whether the state overall is under-, over-, or optimally served</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>Pricing &amp; Product Intelligence</h4>
+      <ul>
+        <li>Average ticket price per person across the state</li>
+        <li>Price range from budget to premium operators</li>
+        <li>Popular room themes and formats performing well in the region</li>
+        <li>Any emerging experience formats (horror, VR-hybrid, competitive, immersive theatre crossover)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section-card" id="s3">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div class="section-title">Business Opportunity Assessment</div>
+    </div>
+    <div class="section-intro">Translates the demographic and market data into specific, actionable city-level recommendations — with the rationale for each clearly stated.</div>
+
+    <div class="subsection">
+      <h4>City Recommendations</h4>
+      <ul>
+        <li><strong>Top 3–5 recommended cities or metro areas</strong> with a specific written rationale for each selection</li>
+        <li>Greenfield opportunities — markets with little or no existing escape room competition</li>
+        <li>Estimated total addressable market size per recommended city</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>Tourist Hotspot Assessment</h4>
+      <ul>
+        <li>For each high-tourism city identified in Section 1 — is existing escape room provision adequate for the visitor volume, or is the market underserved?</li>
+        <li>Whether dominant visitor types (families, couples, groups) match escape room audience profiles</li>
+        <li>Proximity to major attractions — venues near top-10 draws benefit from activity overflow</li>
+        <li>Rainy day positioning viability for tourist-heavy locations</li>
+        <li>Hotel and accommodation density nearby — guests actively seek evening and daytime activities</li>
+        <li>Online activity platform performance: TripAdvisor Experiences, Viator, GetYourGuide — do escape rooms perform strongly in comparable tourist cities?</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>University City Assessment</h4>
+      <ul>
+        <li>For each flagged high-student city — does an escape room already exist within 1 mile of campus?</li>
+        <li>Walk-in trade potential from student foot traffic</li>
+        <li>Group booking demand from sports teams, clubs, societies, and university department events</li>
+        <li>Student discount pricing strategy viability</li>
+        <li>Freshers week and orientation periods as major annual revenue spikes</li>
+        <li>Venue proximity to student union buildings, bars, and late-night entertainment strips</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>Market Context</h4>
+      <ul>
+        <li>Franchise vs independent operator considerations specific to this state</li>
+        <li>Seasonal demand factors — tourism peaks, university calendar, local events</li>
+        <li>Competition from adjacent entertainment: VR arcades, axe throwing, mini golf, bowling, immersive dining</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section-card" id="s4">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div class="section-title">Commercial Real Estate &amp; Location Data <span class="badge">Priority Section</span></div>
+    </div>
+    <div class="section-intro">The most detailed section of every report. Identifies prime, commercially viable sites that meet Wendy's specific operational requirements — and filters out anything that does not.</div>
+
+    <div class="requirements-box">
+      <h4>Wendy's Hard Site Requirements — Non-Negotiable</h4>
+      <ul>
+        <li><strong>Minimum 2,000 sq ft</strong> — anything below this threshold is excluded from the report entirely</li>
+        <li><strong>Target range: 3,500–6,000 sq ft</strong> to comfortably accommodate 4–6 escape rooms plus all supporting spaces</li>
+        <li><strong>4–6 escape rooms</strong> — each room requires approximately 250–400 sq ft of dedicated play space</li>
+        <li>Supporting spaces required: reception and waiting area (400–600 sq ft), GM monitoring station, corridors, bathrooms, storage, staff areas</li>
+        <li><strong>Prime location</strong> — high footfall, strong visibility, passing trade potential</li>
+        <li><strong>Reasonable price per sq ft</strong> — the report will flag what constitutes value vs overpriced for each specific market</li>
+      </ul>
+    </div>
+
+    <div class="subsection" style="margin-top:18px;">
+      <h4>Per-City Lease Rate Intelligence</h4>
+      <ul>
+        <li>Current average commercial lease rate per sq ft — monthly and annual — broken down by <strong>Class A, B, and C space</strong></li>
+        <li>Clear definition of what "reasonable" vs "premium/overpriced" means in that specific market</li>
+        <li>Current vacancy rates for suitable commercial space in target areas</li>
+        <li>Any specific available properties matching the size criteria sourced from LoopNet, CoStar, Crexi, or local commercial listings</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>Prime Location Factors</h4>
+      <ul>
+        <li>Specific named neighbourhoods, districts, and streets with high footfall and visibility</li>
+        <li>Proximity priorities: entertainment districts, restaurants and bars, cinemas, bowling alleys, shopping centres, transport hubs, hotels, tourist attractions</li>
+        <li>Ground floor vs upper floor analysis — ground floor preferred for walk-in trade; upper floor may offer significantly lower rates</li>
+        <li>Parking availability — surface lots, structured parking, or street parking (essential for group bookings)</li>
+        <li>Loading access for large props, set dressing, and equipment delivery</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>Physical Property Requirements</h4>
+      <ul>
+        <li>Ceiling height — minimum 9ft recommended for immersive room design</li>
+        <li>Column-free floor plans preferred to allow flexible room configuration</li>
+        <li>Power supply capacity for lighting, audio, and puzzle electronics across 4–6 simultaneous rooms</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h4>Lease Structure Intelligence</h4>
+      <ul>
+        <li>Typical lease lengths in this market — 3, 5, and 10 year term norms</li>
+        <li>Whether landlords are offering <strong>rent-free periods or fit-out contributions</strong> for quality tenants</li>
+        <li>Triple net (NNN) vs gross lease norms for the state</li>
+        <li>Tenant improvement allowances typical in this market</li>
+        <li>Enterprise zone incentives or small business grants available to offset real estate costs</li>
+      </ul>
+    </div>
+
+    <div class="flag-box">
+      <h4>Red Flags — The Agent Will Actively Flag These</h4>
+      <ul>
+        <li>Areas with declining footfall or visible retail blight</li>
+        <li>Locations where parking is severely limited or expensive</li>
+        <li>Markets where commercial rents have spiked unsustainably in the past two years</li>
+        <li>Sites below the 2,000 sq ft minimum — these are excluded, not flagged</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="section-card" id="s5">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <div class="section-title">Regulatory &amp; Operational Environment</div>
+    </div>
+    <div class="section-intro">Covers the legal and compliance landscape so there are no surprises after a site is selected.</div>
+
+    <div class="subsection">
+      <ul>
+        <li>State business registration requirements and process</li>
+        <li>Fire safety codes and occupancy limits applicable to immersive entertainment venues</li>
+        <li>Liquor licence availability and rules — relevant if a bar or drinks element is planned</li>
+        <li>State-level small business support programmes and incentive schemes</li>
+        <li>Any state-specific regulations relevant to escape rooms or immersive entertainment</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="section-card" id="s6">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <div class="section-title">Financial Benchmarks</div>
+    </div>
+    <div class="section-intro">Provides the financial context needed to evaluate viability and build a business case.</div>
+
+    <div class="subsection">
+      <ul>
+        <li>Industry average revenue per escape room per year</li>
+        <li>Typical venue fit-out and build cost range for this specific market</li>
+        <li>Estimated break-even timeline based on market conditions</li>
+        <li>Notable recent escape room openings, closures, or acquisitions in the state — market momentum indicators</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Report Output -->
+  <div class="output-section">
+    <h3>What Each State Report Delivers</h3>
+    <ul>
+      <li><strong>Cover page</strong> — report title, state name, date generated, "Prepared for: Wendy"</li>
+      <li><strong>Executive Summary</strong> — top 5 findings distilled to a single page</li>
+      <li><strong>Clickable table of contents</strong> for easy navigation</li>
+      <li><strong>Top Recommended Locations table</strong> — summary of best cities with key stats</li>
+      <li><strong>Six fully researched sections</strong> as detailed in this document</li>
+      <li><strong>Key Risks &amp; Considerations</strong> section</li>
+      <li><strong>Self-contained HTML file</strong> — no internet connection needed to view it</li>
+      <li><strong>Print-ready for PDF</strong> — open in any browser, File → Print → Save as PDF</li>
+      <li><strong>Fresh live data</strong> — every report is generated with current information at the time of running</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Research programme designed for Wendy &nbsp;|&nbsp; <span>Escape Room US Market Intelligence</span> &nbsp;|&nbsp; June 2026
+</footer>
+
+</body>
+</html>
