@@ -71,6 +71,13 @@ Use web search to gather current, accurate data across all of the following area
   - Presence of Greek life (fraternities and sororities) — strong group booking demand indicator
   - Postgraduate and international student population — higher disposable income segment
 
+- **Family & School Holiday Market:**
+  - Proportion of the population that are families with children aged 8–16 — the core family escape room demographic
+  - Number of primary and secondary schools in recommended cities (large school populations indicate strong family market density)
+  - School holiday calendar for the state — identify the specific weeks that would drive peak family bookings (spring break, summer, Thanksgiving, Christmas, winter break)
+  - Are recommended cities family-oriented leisure destinations, or are they primarily student, tourist, or corporate markets?
+  - Presence of family entertainment competitors (trampoline parks, bowling, laser tag, family cinemas) — indicates a proven family leisure spend market
+
 ---
 
 ### 2. Escape Room Market Landscape
@@ -94,6 +101,14 @@ Use web search to gather current, accurate data across all of the following area
   - Check whether existing escape room venues in the state are actively discounting on Groupon, LivingSocial, or similar deal platforms
   - Heavy and sustained discounting is a red flag — it typically indicates venues struggling to fill rooms at full price and signals an unhealthy market or weak operator
   - Note any venues that appear to rely on discounting as their primary marketing channel
+
+- **Future Competitive Pipeline:**
+  - Search for any announced escape room openings, new venue launches, or franchise expansion announcements for the state and recommended cities
+  - Check for planning applications or building permits for entertainment venues in target areas where this data is publicly accessible
+  - Look for franchise brand expansion press releases — national chains often announce new territory openings months in advance
+  - Search local business news, commercial real estate news, and entertainment industry publications for any pipeline activity
+  - If a major well-funded competitor is already confirmed to be opening in a recommended city within the next 12 months, flag this prominently — it materially changes the entry calculus
+  - Conversely, a city with no pipeline activity and current underservice is a stronger opportunity signal
 
 - **Competitor Sentiment Analysis — Customer Review Intelligence:**
   - Search Google Reviews, Yelp, TripAdvisor, Facebook Reviews, and Instagram for every named venue identified in the state
@@ -154,6 +169,11 @@ Use web search to gather current, accurate data across all of the following area
   - Freshers week and orientation periods as major annual revenue spikes
   - Proximity to student union buildings, bars, and late-night entertainment strips
 
+- **Family Market Assessment:**
+  - For each recommended city, assess whether family bookings are likely to be a primary, secondary, or minor revenue stream based on demographics and leisure landscape
+  - Identify whether any competitor venues in the city are actively marketing to families (minimum age policies, family room designs, birthday party packages) — and whether there is an unmet family-focused gap
+  - School holiday weeks as booking spike periods — are recommended venues in areas accessible to families by car or public transport?
+
 - **Franchise Opportunities:**
   - Are any major national escape room franchise brands actively seeking franchisees in this state?
   - If so: franchise fee, royalty structure, territory terms, and support offered
@@ -210,12 +230,21 @@ Use web search to gather current, accurate data across all of the following area
 - Tenant improvement allowances typical in this market
 - Enterprise zone incentives or small business grants available to offset real estate costs
 
+**Crime & Safety Data (per recommended neighbourhood):**
+- Look up neighbourhood-level crime statistics for every recommended area using publicly available data (FBI crime data, local police department statistics, NeighborhoodScout, AreaVibes, or equivalent)
+- Assess violent crime rate and property crime rate relative to the city and national average
+- Flag any recommended neighbourhood with above-average crime rates — customers, particularly families and women's groups booking hen nights, will avoid areas they perceive as unsafe after dark
+- Note whether the area feels safe for staff working evening and late-night shifts
+- High crime areas will also attract higher commercial insurance premiums — note this connection
+- A venue in a low-crime, well-lit, busy area commands customer confidence; flag this positively where it applies
+
 **Red flags:**
 - C-grade or dying malls with declining footfall — cheap rent does not compensate for low passing trade
 - Areas with retail blight or high nearby vacancy rates
 - Severely limited or paid parking
 - Markets where commercial rents have spiked unsustainably in the past 2 years
 - Cities within high-outmigration states where the customer base is shrinking
+- Neighbourhoods with above-average crime rates — particularly relevant for an evening entertainment venue
 
 ---
 
@@ -263,6 +292,14 @@ Use web search to gather current, accurate data across all of the following area
   - Realistic estimate of ancillary revenue from corporate packages, private events, merchandise, and photo packages in this market
   - Gift card market assessment — how active is the gifting culture for experiences in the region?
 
+- **Digital Marketing & Customer Acquisition Costs:**
+  - Estimated Google Ads cost-per-click for escape room related keywords in each recommended city (search "[city] escape room" ad auction competitiveness)
+  - Whether existing operators in the city are running paid search or social media ads — indicates market maturity and advertising costs
+  - Active local Facebook community groups, neighbourhood apps (Nextdoor), and city tourism websites that could be leveraged for low-cost marketing
+  - Local influencers, bloggers, or YouTube channels that review escape rooms or local entertainment in the region
+  - Whether TripAdvisor, Yelp, or Google Business listings dominate local discovery for escape rooms — indicates where to prioritise review generation
+  - Estimated customer acquisition cost range for this market based on comparable city benchmarks — higher CAC in competitive markets directly affects the financial model
+
 ---
 
 ## Output Instructions
@@ -275,6 +312,15 @@ Use web search to gather current, accurate data across all of the following area
    - Dark header bar (#1a1a2e), white body, accent colour #e94560
    - Section cards with light grey backgrounds (#f8f9fa) and subtle box shadows
    - Cover page: report title, state name, date generated, "Prepared for: Wendy"
+   - **State Scorecard** — immediately after the cover page, before any other content: a visual scored dashboard rating the state across six dimensions, each scored 1–5, with an overall verdict of GO / PROCEED WITH CAUTION / AVOID:
+     1. Market Size & Demographic Strength
+     2. Competitive Gap (how underserved is the market?)
+     3. Population & Economic Health (migration, employment, tax environment)
+     4. Real Estate Value (quality sites at reasonable cost)
+     5. Tourism & Footfall Drivers
+     6. Financial Viability (revenue potential vs operating costs)
+   - The overall verdict (GO / PROCEED WITH CAUTION / AVOID) should be displayed prominently in a coloured banner: green for GO, amber for PROCEED WITH CAUTION, red for AVOID
+   - This scorecard makes it easy to compare multiple state reports at a glance without reading every page
    - Table of contents with anchor links
    - Executive Summary: top 5 findings, any HIGH RISK or HIGH OPPORTUNITY flags prominent at the top
    - Vancouver, WA benchmark comparison table
