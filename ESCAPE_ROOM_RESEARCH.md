@@ -26,7 +26,9 @@ To convert to PDF: open the file in Chrome or Safari → File → Print → Save
 
 ## What the Report Covers
 1. **State Demographics & Market Profile** — population, age distribution,
-   household income, tourism visitor numbers, university and college
+   household income, inbound tourism (annual visitor numbers domestic and
+   international, top 10 attractions by visitor count, peak seasons, visitor
+   spend on activities, convention/conference activity), university and college
    populations (cities with high student concentrations flagged as HIGH
    OPPORTUNITY markets)
 2. **Escape Room Market Landscape** — existing venues, franchise presence,

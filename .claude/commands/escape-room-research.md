@@ -14,7 +14,19 @@ Use web search to gather current, accurate data across all of the following area
 - Household income levels and disposable income
 - Urban vs rural split; top metro areas by population
 - Education levels (correlate with puzzle/experience appetite)
-- Tourism visitor numbers (annual domestic + international)
+- **Inbound Tourism & Visitor Economy (high priority indicator):**
+  - Total annual visitor numbers to the state — domestic and international figures separately
+  - Year-on-year trend: is tourism growing, flat, or declining?
+  - Top 10 tourist attractions in the state by annual visitor numbers (national monuments, parks, historical sites, theme parks, landmarks, scenic areas, etc.)
+  - Which cities or regions capture the highest concentration of tourist traffic
+  - Average visitor length of stay and typical spend per day on activities and entertainment
+  - Peak tourist seasons and shoulder seasons — map these against escape room demand potential
+  - Visitor demographics: family groups, couples, solo travellers, corporate/conference visitors — identify which segments overlap with escape room audiences
+  - Convention and conference activity: major venues, annual events, trade shows that bring in large groups (strong corporate booking indicator)
+  - Any state tourism board data or "things to do" positioning that escape rooms could tap into
+  - Rainy day / indoor activity demand: states with unpredictable or wet weather see higher demand for indoor entertainment from tourists
+  - Flag any cities where tourism is the primary economic driver — these represent captive audiences actively seeking activities
+
 - **University & College Population (high priority indicator):**
   - List all universities and colleges in the state with their city and total enrolled student population
   - Identify the top 5 cities by student population concentration
@@ -37,6 +49,13 @@ Use web search to gather current, accurate data across all of the following area
 ### 3. Business Opportunity Assessment
 - Top 3–5 recommended cities or metro areas with rationale
 - Greenfield opportunities (markets with no or minimal operators)
+- **High-tourism cities and regions — assess each identified tourist hotspot for:**
+  - Existing escape room provision relative to visitor volume (is the market underserved for the footfall?)
+  - Whether the dominant visitor type (families, couples, groups) aligns with escape room demographics
+  - Proximity to major attractions — a venue within walking distance of a top-10 attraction benefits from overflow activity seekers
+  - "Rainy day" positioning viability — tourist destinations with variable weather are strong candidates
+  - Hotel and accommodation density nearby (guests actively look for evening and daytime activities)
+  - Online activity platform presence (TripAdvisor Experiences, Viator, GetYourGuide) — assess whether escape rooms in similar tourist cities perform well on these platforms
 - **University towns and college cities — assess each identified high-student city for:**
   - Whether an escape room venue already exists within 1 mile of campus
   - Walk-in trade potential from student foot traffic
