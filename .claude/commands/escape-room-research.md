@@ -258,8 +258,36 @@ Use web search to gather current, accurate data across all of the following area
   - How long does it realistically take to get a commercial entertainment venue permitted and open in this state, from lease signing to doors open?
   - Known bottlenecks: building permits, fire marshal inspections, occupancy certificates
   - Contractor availability for specialist fit-out work in the recommended cities
-- State small business support programmes, grants, and incentive schemes
 - Any state-specific regulations relevant to escape rooms or immersive entertainment venues (some states have introduced specific rules following safety incidents at escape rooms nationally)
+
+- **Tax Incentives & Business Investment Credits (positive opportunity modifier):**
+
+  This section should be researched thoroughly — genuine tax incentives can materially improve the financial case for a state that is otherwise viable. **Important framing:** incentives should be treated as a positive modifier on an already attractive state, never as a reason to enter a state that scores poorly on migration, economic health, or market fundamentals. A tax break in a declining market is not a good deal.
+
+  Research and report on all of the following where they exist in this state:
+
+  - **Federal Opportunity Zones:** Check whether any recommended cities or neighbourhoods fall within a designated federal Opportunity Zone (IRS and CDFI Fund maintain publicly searchable maps). Opportunity Zones offer capital gains tax deferral and potential reduction for investments held 5–10 years — a meaningful benefit for a fit-out and build investment
+  - **State Enterprise Zones / Economic Development Zones:** Many states designate specific zones with property tax abatements, local income tax credits, reduced business rates, or sales tax exemptions for businesses that set up and create jobs in targeted areas — search each state's economic development agency website
+  - **New Markets Tax Credit (NMTC):** Federal programme offering tax credits for investments in low-income communities — check eligibility for recommended cities
+  - **State Small Business Tax Credits:** Many states offer credits for job creation, capital investment, or locating in underserved areas — check the state's department of revenue or commerce website; the National Conference of State Legislatures (NCSL) also maintains a summary database
+  - **State Small Business Credit Initiative (SSBCI):** Federally funded but state-administered programme providing capital support to small businesses — check whether the state has an active SSBCI programme and what it covers
+  - **Sales Tax Exemptions on fit-out and equipment:** Some states exempt business equipment purchases or construction materials from sales tax — relevant to escape room build costs which can be significant
+  - **Local city or county incentives:** Some municipalities offer additional incentives beyond state level — rate relief, business improvement district (BID) support, marketing grants, or reduced permit fees for new businesses in target regeneration areas
+  - **Entertainment or tourism industry-specific incentives:** A small number of states have incentive programmes specifically designed to attract tourism or entertainment businesses — flag any that apply
+  - **First-year or start-up tax relief:** Some states offer reduced or waived business taxes in the first 1–3 years of operation for new businesses
+  - **SBA loan programmes:** Note any particularly active Small Business Administration lending programmes or preferred lenders in the state that could support fit-out financing
+
+  For each incentive found, state clearly:
+  - What the incentive is and who administers it
+  - Whether the recommended cities or sites qualify
+  - The estimated financial value or saving to Wendy's specific scenario (e.g. "a $400,000 fit-out in an Opportunity Zone could defer approximately $X in capital gains tax")
+  - Any conditions, minimum investment thresholds, or job creation requirements attached
+  - Whether the incentive is time-limited or subject to renewal
+
+  **If a state offers meaningful, accessible incentives that apply to Wendy's scenario, flag this in the Executive Summary and reflect it positively in the State Scorecard financial viability score.**
+  **If no meaningful incentives are found, state this clearly rather than omitting the section.**
+
+- State small business support programmes, grants, and mentorship schemes beyond tax incentives
 
 ---
 
