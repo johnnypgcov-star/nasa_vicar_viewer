@@ -62,6 +62,19 @@ Use web search to gather current, accurate data across all of the following area
 - Pricing benchmarks (average ticket price per person)
 - Popular themes and formats in the region
 
+- **Competitor Sentiment Analysis — Customer Review Intelligence (search Google, Yelp, TripAdvisor, Facebook, and Instagram for each identified venue):**
+  - For every named escape room venue identified in the state, search for their public customer reviews and ratings across all available platforms
+  - Record the overall star rating on each platform where available (Google Reviews, Yelp, TripAdvisor, Facebook Reviews)
+  - Summarise the most commonly recurring themes in positive reviews — what do customers consistently praise? (e.g. immersive design, staff enthusiasm, puzzle quality, value for money, atmosphere)
+  - Summarise the most commonly recurring complaints in negative reviews — what do customers consistently criticise? (e.g. outdated rooms, poor technology, unhelpful staff, overpriced, too short, too easy or too hard, poor maintenance)
+  - Look for Instagram and Facebook posts tagged at or about each venue — assess visual presentation, production quality of rooms based on shared photos, and general social media sentiment
+  - Flag any venue that has a pattern of unresolved complaints or a declining review trend over time
+  - Flag any venue where customers explicitly mention they would not return or would not recommend — strong indicator of market dissatisfaction
+  - Identify recurring gaps or unmet customer desires across all competitor reviews (e.g. "wish there was a horror room", "need more rooms", "need a bar area") — these are direct product opportunities for a new entrant
+  - **Opportunity signal:** where an established venue has poor ratings (below 3.8 stars) or consistent negative sentiment, flag the city as a MARKET OPPORTUNITY — customers are present but underserved
+  - **Competitive threat signal:** where a venue has strong ratings (above 4.5 stars) and high review volume, flag as an ESTABLISHED COMPETITOR requiring a differentiated product to compete
+  - Note the volume of reviews as well as the score — a venue with 1,000 reviews at 4.2 stars represents a very active market; a venue with 30 reviews at 4.8 may be niche or new
+
 ### 3. Business Opportunity Assessment
 - Top 3–5 recommended cities or metro areas with rationale
 - Greenfield opportunities (markets with no or minimal operators)
@@ -83,6 +96,7 @@ Use web search to gather current, accurate data across all of the following area
 - Estimated addressable market size
 - Seasonal demand factors (tourism peaks, weather, local events, university academic calendar)
 - Competition from adjacent entertainment (VR arcades, axe throwing, mini golf, etc.)
+- **Review-informed opportunity scoring:** use the competitor sentiment data from Section 2 to rank recommended cities — cities where existing venues have poor reviews and high demand should score highest for entry; cities with dominant, highly-rated operators should be scored more cautiously unless a clear product differentiator exists
 
 ### 4. Commercial Real Estate & Location Data (PRIORITY SECTION — provide maximum detail)
 
