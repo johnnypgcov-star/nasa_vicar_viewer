@@ -26,11 +26,15 @@ To convert to PDF: open the file in Chrome or Safari → File → Print → Save
 
 ## What the Report Covers
 1. **State Demographics & Market Profile** — population, age distribution,
-   household income, tourism visitor numbers
+   household income, tourism visitor numbers, university and college
+   populations (cities with high student concentrations flagged as HIGH
+   OPPORTUNITY markets)
 2. **Escape Room Market Landscape** — existing venues, franchise presence,
    saturation analysis, underserved cities, pricing benchmarks
 3. **Business Opportunity Assessment** — top 3–5 recommended cities,
-   greenfield markets, addressable market size, seasonal demand
+   greenfield markets, addressable market size, seasonal demand; university
+   towns assessed for campus proximity, walk-in trade, group bookings,
+   freshers week revenue spikes
 4. **Commercial Real Estate & Location Data** — see requirements below
 5. **Regulatory & Operational Environment** — business registration, safety
    codes, liquor licence rules, small business incentives

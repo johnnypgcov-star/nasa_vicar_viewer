@@ -15,6 +15,15 @@ Use web search to gather current, accurate data across all of the following area
 - Urban vs rural split; top metro areas by population
 - Education levels (correlate with puzzle/experience appetite)
 - Tourism visitor numbers (annual domestic + international)
+- **University & College Population (high priority indicator):**
+  - List all universities and colleges in the state with their city and total enrolled student population
+  - Identify the top 5 cities by student population concentration
+  - Flag any city where students represent more than 10% of the local population as a HIGH OPPORTUNITY market
+  - Note proximity of campuses to city centres (walkable vs car-dependent)
+  - Student spending patterns on entertainment and experiences
+  - Academic calendar — identify peak demand periods (semester time) and low periods (summer, holidays) and how this affects revenue planning
+  - Presence of Greek life (fraternities/sororities) — strong indicator of group booking demand
+  - Postgraduate and international student population (higher disposable income segment)
 
 ### 2. Escape Room Market Landscape
 - Estimated number of existing escape room venues in the state
@@ -28,9 +37,16 @@ Use web search to gather current, accurate data across all of the following area
 ### 3. Business Opportunity Assessment
 - Top 3–5 recommended cities or metro areas with rationale
 - Greenfield opportunities (markets with no or minimal operators)
+- **University towns and college cities — assess each identified high-student city for:**
+  - Whether an escape room venue already exists within 1 mile of campus
+  - Walk-in trade potential from student foot traffic
+  - Group booking potential (sports teams, clubs, societies, corporate-style team events from university departments)
+  - Student discount pricing strategy viability
+  - Freshers week and orientation period as major annual revenue spikes
+  - Venue proximity to student union buildings, bars, and late-night entertainment strips
 - Franchise vs independent operator considerations for this state
 - Estimated addressable market size
-- Seasonal demand factors (tourism peaks, weather, local events)
+- Seasonal demand factors (tourism peaks, weather, local events, university academic calendar)
 - Competition from adjacent entertainment (VR arcades, axe throwing, mini golf, etc.)
 
 ### 4. Commercial Real Estate & Location Data (PRIORITY SECTION — provide maximum detail)
