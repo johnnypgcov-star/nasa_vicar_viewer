@@ -24,24 +24,36 @@ Saved to: `reports/escape-room-[state].html`
 
 To convert to PDF: open the file in Chrome or Safari → File → Print → Save as PDF.
 
+## Operator Context Built Into Every Report
+Wendy operates a 3-room escape room in a mall in Vancouver, Washington (est. 2022,
+performing well). The agent knows this and tailors every report accordingly:
+- Mall and retail entertainment centre locations are prioritised (her proven model)
+- All city recommendations are benchmarked against her Vancouver, WA market
+- Recommendations are framed for an experienced operator, not a first-time entrant
+
 ## What the Report Covers
-1. **State Demographics & Market Profile** — population, age distribution,
-   household income; net migration and tax burden (states with high outmigration
-   and rising taxes flagged HIGH RISK in the Executive Summary); inbound tourism
-   (annual visitor numbers domestic and international, top 10 attractions by
-   visitor count, peak seasons, visitor spend on activities, convention activity);
-   university and college populations (cities with high student concentrations
-   flagged as HIGH OPPORTUNITY markets)
-2. **Escape Room Market Landscape** — existing venues, franchise presence,
-   saturation analysis, underserved cities, pricing benchmarks
-3. **Business Opportunity Assessment** — top 3–5 recommended cities,
-   greenfield markets, addressable market size, seasonal demand; university
-   towns assessed for campus proximity, walk-in trade, group bookings,
-   freshers week revenue spikes
-4. **Commercial Real Estate & Location Data** — see requirements below
-5. **Regulatory & Operational Environment** — business registration, safety
-   codes, liquor licence rules, small business incentives
-6. **Financial Benchmarks** — revenue per room, fit-out costs, break-even timeline
+1. **State Demographics & Market Profile** — population, age, income; economic
+   health (unemployment, job growth, major employers); net migration and tax burden
+   (HIGH RISK flag for outmigration states); inbound tourism (visitor numbers,
+   top 10 attractions, seasonal peaks); university populations (HIGH OPPORTUNITY
+   flag for student-heavy cities)
+2. **Escape Room Market Landscape** — competitor mapping, franchise presence,
+   saturation; Google search demand; Groupon/discount platform health check;
+   full competitor sentiment analysis across Google, Yelp, TripAdvisor, Facebook,
+   Instagram (MARKET OPPORTUNITY and ESTABLISHED COMPETITOR flags)
+3. **Business Opportunity Assessment** — top 3–5 cities with rationale; Vancouver
+   WA benchmark comparison; corporate and team-building market; major events
+   calendar; tourist and university city assessments; franchise options; multi-site
+   scaling considerations; weekend vs weekday demand balance
+4. **Commercial Real Estate & Location Data** — mall and retail centre
+   opportunities (graded A/B/C); prime site assessment; lease rates per sq ft;
+   physical property requirements; lease structure intelligence; red flags
+5. **Regulatory & Operational Environment** — business registration; safety
+   codes; ADA compliance; liquor licences; permitting and build timelines;
+   small business grants
+6. **Financial Benchmarks & Operating Costs** — revenue per room; build costs;
+   break-even timeline; labour market and staffing costs; insurance; technology
+   and booking systems; ancillary revenue potential
 
 ## Wendy's Site Requirements (Section 4)
 These are hard-coded into the agent — it will filter accordingly automatically:

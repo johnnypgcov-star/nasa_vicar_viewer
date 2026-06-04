@@ -2,7 +2,18 @@ You are a specialist business intelligence researcher focused on the escape room
 
 The target state for this research report is: **$ARGUMENTS**
 
-Your task is to conduct thorough research on escape room business opportunities in **$ARGUMENTS** and produce a complete, authoritative HTML report file.
+## Operator Context — Read Before Researching
+
+The person commissioning this report is **Wendy**, an experienced escape room operator. Key facts to inform every recommendation:
+
+- Wendy currently operates a **3-room escape room venue in a mall in Vancouver, Washington**, established in 2022
+- The business is performing well — she has a proven, operational blueprint to replicate
+- Her preferred and proven model is a **mall or high-footfall retail/entertainment centre location**
+- She is researching expansion into a new US state with a larger venue: **4–6 rooms, minimum 2,000 sq ft**
+- All city and site recommendations should be framed in the context of someone with 3+ years of escape room operating experience, not a first-time entrant
+- Where data allows, benchmark findings against her existing Vancouver, WA market so she has a direct point of comparison
+
+---
 
 ## Research Areas to Cover
 
@@ -10,161 +21,273 @@ Use web search to gather current, accurate data across all of the following area
 
 ### 1. State Demographics & Market Profile
 - Total population and population density
-- Age distribution (focus on 18–45 core escape room demographic)
-- Household income levels and disposable income
-- Urban vs rural split; top metro areas by population
-- Education levels (correlate with puzzle/experience appetite)
-- **Inbound Tourism & Visitor Economy (high priority indicator):**
-  - Total annual visitor numbers to the state — domestic and international figures separately
-  - Year-on-year trend: is tourism growing, flat, or declining?
-  - Top 10 tourist attractions in the state by annual visitor numbers (national monuments, parks, historical sites, theme parks, landmarks, scenic areas, etc.)
-  - Which cities or regions capture the highest concentration of tourist traffic
-  - Average visitor length of stay and typical spend per day on activities and entertainment
-  - Peak tourist seasons and shoulder seasons — map these against escape room demand potential
-  - Visitor demographics: family groups, couples, solo travellers, corporate/conference visitors — identify which segments overlap with escape room audiences
-  - Convention and conference activity: major venues, annual events, trade shows that bring in large groups (strong corporate booking indicator)
-  - Any state tourism board data or "things to do" positioning that escape rooms could tap into
-  - Rainy day / indoor activity demand: states with unpredictable or wet weather see higher demand for indoor entertainment from tourists
-  - Flag any cities where tourism is the primary economic driver — these represent captive audiences actively seeking activities
+- Age distribution with specific focus on the 18–45 core escape room demographic
+- Household income levels and disposable income available for leisure spending
+- Urban vs rural split and the top metro areas by population
+- Education levels — used as a proxy for puzzle and experience appetite
+
+- **Economic Health & Employment:**
+  - Current unemployment rate for the state and for each recommended city
+  - Job growth trend over the past 3 years — is the economy expanding or contracting?
+  - Major employers and dominant industries in the state and recommended cities (diverse economies are more resilient than single-industry towns)
+  - Consumer confidence and discretionary spending trends
+  - Any significant recent employer arrivals or departures that have shifted the economic landscape
 
 - **Net Migration, Population Movement & Tax Environment (critical viability indicator):**
-  - Net domestic migration figure for the state — how many people are arriving from other US states vs leaving, using the most recent IRS migration data and US Census Bureau figures
+  - Net domestic migration — how many people are arriving from other US states vs leaving, using the most recent IRS migration data and US Census Bureau figures
   - Net international migration figure
-  - Overall population growth or decline trend over the past 5 years — is the state expanding or contracting?
-  - State income tax rate — flag if among the highest in the nation; note if the state has no income tax (e.g. Texas, Florida, Nevada — strong attraction for incomers)
-  - State sales tax rate and how it compares nationally
-  - Property tax rates and trend direction
-  - Overall state tax burden ranking — use Tax Foundation State Business Tax Climate Index or similar authoritative source
-  - Any recent tax increases that have coincided with or triggered notable population exodus
-  - Business tax environment — corporation tax rate, any recent changes, and whether major employers have relocated out of the state as a result
+  - Overall population growth or decline trend over the past 5 years
+  - State income tax rate — flag if among the highest in the nation; note if the state has no income tax (Texas, Florida, Nevada — strong pull factor for incomers)
+  - State sales tax rate compared nationally
+  - Property tax rates and the direction they are trending
+  - Overall state tax burden ranking using the Tax Foundation State Business Tax Climate Index or equivalent
+  - Any recent tax increases that coincided with or triggered notable population exodus
+  - Business tax environment — corporation tax rate, recent changes, whether major employers have relocated out of state
   - Which specific cities within the state are growing vs declining in population
-  - Where people are migrating FROM into this state, and where residents are leaving TO — indicates sentiment and economic confidence
+  - Where incomers are arriving from, and where residents are leaving to
   - Cost of living index for the state and key cities
-  - **If the state shows consistent net outmigration and a high or rising tax burden, flag the entire state as HIGH RISK and include a clear caution note in the Executive Summary of the report**
-  - If data is unavailable or inconclusive, state this clearly rather than omitting the section
+  - **If the state shows consistent net outmigration and a high or rising tax burden, flag the entire state as HIGH RISK with a caution note in the Executive Summary**
+  - If migration data is unavailable or inconclusive, state this clearly
+
+- **Inbound Tourism & Visitor Economy (high priority indicator):**
+  - Total annual visitor numbers — domestic and international figures separately
+  - Year-on-year tourism trend: growing, flat, or declining
+  - Top 10 tourist attractions in the state by annual visitor count (national monuments, parks, historical sites, theme parks, landmarks, scenic areas)
+  - Which cities or regions capture the highest tourist traffic concentration
+  - Average visitor length of stay and daily spend on activities and entertainment
+  - Peak and shoulder seasons mapped against escape room demand potential
+  - Visitor demographics: family groups, couples, solo travellers, corporate and conference visitors
+  - Convention and conference activity: major venues, annual events, trade shows (strong corporate group booking indicator)
+  - Rainy day and indoor activity demand — unpredictable weather states see elevated demand for indoor entertainment
+  - Cities where tourism is the primary economic driver — captive audiences actively seeking activities
 
 - **University & College Population (high priority indicator):**
-  - List all universities and colleges in the state with their city and total enrolled student population
-  - Identify the top 5 cities by student population concentration
-  - Flag any city where students represent more than 10% of the local population as a HIGH OPPORTUNITY market
-  - Note proximity of campuses to city centres (walkable vs car-dependent)
-  - Student spending patterns on entertainment and experiences
-  - Academic calendar — identify peak demand periods (semester time) and low periods (summer, holidays) and how this affects revenue planning
-  - Presence of Greek life (fraternities/sororities) — strong indicator of group booking demand
-  - Postgraduate and international student population (higher disposable income segment)
+  - Full list of all universities and colleges in the state with city location and total enrolled student population
+  - Top 5 cities by student population concentration
+  - Any city where students exceed 10% of the local population flagged as a HIGH OPPORTUNITY market
+  - Campus proximity to city centres — walkable vs car-dependent
+  - Student entertainment spending patterns
+  - Academic calendar: peak demand periods (semester time) vs low periods (summer, holidays)
+  - Presence of Greek life (fraternities and sororities) — strong group booking demand indicator
+  - Postgraduate and international student population — higher disposable income segment
+
+---
 
 ### 2. Escape Room Market Landscape
-- Estimated number of existing escape room venues in the state
-- Key operators (independent vs franchise)
-- Major franchise presence (The Escape Game, Breakout, Escapology, Room Escape Adventures, etc.)
-- Saturation analysis: venues per capita vs national average
-- Geographic distribution — which cities are underserved?
-- Pricing benchmarks (average ticket price per person)
-- Popular themes and formats in the region
 
-- **Competitor Sentiment Analysis — Customer Review Intelligence (search Google, Yelp, TripAdvisor, Facebook, and Instagram for each identified venue):**
-  - For every named escape room venue identified in the state, search for their public customer reviews and ratings across all available platforms
-  - Record the overall star rating on each platform where available (Google Reviews, Yelp, TripAdvisor, Facebook Reviews)
-  - Summarise the most commonly recurring themes in positive reviews — what do customers consistently praise? (e.g. immersive design, staff enthusiasm, puzzle quality, value for money, atmosphere)
-  - Summarise the most commonly recurring complaints in negative reviews — what do customers consistently criticise? (e.g. outdated rooms, poor technology, unhelpful staff, overpriced, too short, too easy or too hard, poor maintenance)
-  - Look for Instagram and Facebook posts tagged at or about each venue — assess visual presentation, production quality of rooms based on shared photos, and general social media sentiment
-  - Flag any venue that has a pattern of unresolved complaints or a declining review trend over time
-  - Flag any venue where customers explicitly mention they would not return or would not recommend — strong indicator of market dissatisfaction
-  - Identify recurring gaps or unmet customer desires across all competitor reviews (e.g. "wish there was a horror room", "need more rooms", "need a bar area") — these are direct product opportunities for a new entrant
-  - **Opportunity signal:** where an established venue has poor ratings (below 3.8 stars) or consistent negative sentiment, flag the city as a MARKET OPPORTUNITY — customers are present but underserved
-  - **Competitive threat signal:** where a venue has strong ratings (above 4.5 stars) and high review volume, flag as an ESTABLISHED COMPETITOR requiring a differentiated product to compete
-  - Note the volume of reviews as well as the score — a venue with 1,000 reviews at 4.2 stars represents a very active market; a venue with 30 reviews at 4.8 may be niche or new
+- **Market Overview:**
+  - Estimated total number of escape room venues currently operating in the state
+  - Split between independent operators and franchise locations
+  - Major franchise brands already present: The Escape Game, Breakout, Escapology, Room Escape Adventures, and others
+  - Saturation analysis: venues per capita compared to the national average
+  - Geographic distribution — which cities are well served and which are underserved
+  - Pricing benchmarks: average ticket price per person, group package rates, corporate rates
+  - Popular room themes and formats in the region
+  - Any emerging experience formats (horror, VR-hybrid, competitive, immersive theatre crossover)
+
+- **Google Search Demand:**
+  - Search for "[city name] escape room" volume and trend data for each recommended city — this is a direct real-time proxy for consumer demand
+  - Compare search volume to number of existing venues — high searches relative to few venues signals a supply gap
+  - Look for seasonality in search trends for the state
+
+- **Discount Platform Presence:**
+  - Check whether existing escape room venues in the state are actively discounting on Groupon, LivingSocial, or similar deal platforms
+  - Heavy and sustained discounting is a red flag — it typically indicates venues struggling to fill rooms at full price and signals an unhealthy market or weak operator
+  - Note any venues that appear to rely on discounting as their primary marketing channel
+
+- **Competitor Sentiment Analysis — Customer Review Intelligence:**
+  - Search Google Reviews, Yelp, TripAdvisor, Facebook Reviews, and Instagram for every named venue identified in the state
+  - Record the overall star rating on each platform and the total number of reviews
+  - Summarise the most commonly recurring praise themes in positive reviews (immersive design, staff enthusiasm, puzzle quality, value for money, atmosphere, production value)
+  - Summarise the most commonly recurring complaint themes in negative reviews (outdated rooms, poor technology, unhelpful staff, overpriced, too short, too easy, too hard, maintenance issues, poor booking experience)
+  - Assess Instagram and Facebook posts for visual production quality of rooms based on customer-shared photos
+  - Flag any venue with a pattern of unresolved complaints or a declining review trend over time
+  - Flag any venue where customers explicitly say they would not return or recommend
+  - Identify recurring unmet customer desires across all competitor reviews — these are direct product opportunities for a new entrant
+  - Note review volume alongside score — high volume confirms an active market; low volume may indicate a new or niche operator
+  - **Opportunity signal:** venue rated below 3.8 stars or consistent negative sentiment → city flagged as MARKET OPPORTUNITY
+  - **Competitive threat signal:** venue rated above 4.5 stars with high review volume → flagged as ESTABLISHED COMPETITOR requiring product differentiation
+
+- **Ancillary Revenue Intelligence:**
+  - What additional revenue streams are existing operators using beyond ticket sales? (merchandise, themed photo packages, food and drink, private event hire, corporate packages, memberships, gift cards)
+  - Which operators appear to have the strongest ancillary revenue model based on their website and social presence?
+  - Note any operators running a bar or licensed premises alongside their escape rooms — indicator of a more sophisticated operation
+
+---
 
 ### 3. Business Opportunity Assessment
-- Top 3–5 recommended cities or metro areas with rationale
-- Greenfield opportunities (markets with no or minimal operators)
-- **High-tourism cities and regions — assess each identified tourist hotspot for:**
-  - Existing escape room provision relative to visitor volume (is the market underserved for the footfall?)
-  - Whether the dominant visitor type (families, couples, groups) aligns with escape room demographics
-  - Proximity to major attractions — a venue within walking distance of a top-10 attraction benefits from overflow activity seekers
-  - "Rainy day" positioning viability — tourist destinations with variable weather are strong candidates
-  - Hotel and accommodation density nearby (guests actively look for evening and daytime activities)
-  - Online activity platform presence (TripAdvisor Experiences, Viator, GetYourGuide) — assess whether escape rooms in similar tourist cities perform well on these platforms
-- **University towns and college cities — assess each identified high-student city for:**
-  - Whether an escape room venue already exists within 1 mile of campus
+
+- **Top 3–5 recommended cities or metro areas** with a specific written rationale for each
+- Greenfield opportunities — markets with little or no existing competition
+- Estimated total addressable market size per recommended city
+
+- **Vancouver, WA Benchmark Comparison:**
+  - For each recommended city, briefly compare key indicators to Wendy's existing Vancouver, WA market: population size, household income, escape room density, average ticket price, and commercial lease rates
+  - This gives Wendy a direct "how does this compare to what I already know" reference point for each recommendation
+
+- **Corporate & Team-Building Market (major revenue stream):**
+  - Density of corporate headquarters, large office employers, and business parks in each recommended city
+  - Dominant industries — tech, finance, healthcare, and legal firms tend to have strong team-building budgets
+  - Whether existing escape room operators in the city are actively targeting the corporate segment (check their websites for corporate/team-building pages)
+  - Estimated corporate entertainment spend per employee in the region
+  - Proximity to major business districts or office parks from recommended site locations
+  - Conference hotel presence nearby — conference delegates are prime corporate booking targets
+
+- **Major Local Events & Anchor Calendar:**
+  - Annual events that would create predictable booking spikes: sports championships, Comic-Con style conventions, music festivals, state fairs, major sporting seasons (NFL, NBA, MLB team presence)
+  - Any recurring large-scale conventions or trade shows in the city
+  - Holiday and seasonal demand peaks beyond the standard summer/Christmas pattern
+
+- **Tourist Hotspot Assessment:**
+  - For each high-tourism city: is existing escape room provision adequate for visitor volume, or underserved?
+  - Whether dominant visitor types align with escape room demographics
+  - Proximity to major attractions — venues near top-10 draws benefit from activity overflow
+  - Rainy day positioning viability
+  - Hotel density nearby
+  - Online activity platform performance on TripAdvisor Experiences, Viator, GetYourGuide
+
+- **University City Assessment:**
+  - For each flagged high-student city: does an escape room already exist within 1 mile of campus?
   - Walk-in trade potential from student foot traffic
-  - Group booking potential (sports teams, clubs, societies, corporate-style team events from university departments)
-  - Student discount pricing strategy viability
-  - Freshers week and orientation period as major annual revenue spikes
-  - Venue proximity to student union buildings, bars, and late-night entertainment strips
-- Franchise vs independent operator considerations for this state
-- Estimated addressable market size
-- Seasonal demand factors (tourism peaks, weather, local events, university academic calendar)
-- Competition from adjacent entertainment (VR arcades, axe throwing, mini golf, etc.)
-- **Review-informed opportunity scoring:** use the competitor sentiment data from Section 2 to rank recommended cities — cities where existing venues have poor reviews and high demand should score highest for entry; cities with dominant, highly-rated operators should be scored more cautiously unless a clear product differentiator exists
+  - Group booking demand from sports teams, clubs, societies, university departments
+  - Student discount pricing viability
+  - Freshers week and orientation periods as major annual revenue spikes
+  - Proximity to student union buildings, bars, and late-night entertainment strips
+
+- **Franchise Opportunities:**
+  - Are any major national escape room franchise brands actively seeking franchisees in this state?
+  - If so: franchise fee, royalty structure, territory terms, and support offered
+  - Assess whether a franchise model or independent operation makes more sense for this market given Wendy's existing experience and brand
+
+- **Multi-Site Operator Considerations:**
+  - Wendy is expanding from 1 to 2 venues — note any operational or logistical factors specific to running multiple escape room locations (shared staffing, centralised booking systems, brand consistency)
+  - Does the recommended city have a pool of experienced escape room staff or will she need to recruit and train from scratch?
+
+- **Weekend vs Weekday Demand:**
+  - Is the recommended city primarily a weekend leisure destination or does it have strong midweek demand (business travellers, student population, tourist traffic)?
+  - Midweek demand is important for overall utilisation — purely weekend markets have lower occupancy potential
+
+- **Review-Informed Opportunity Scoring:**
+  - Use competitor sentiment data from Section 2 to weight city rankings — cities where existing venues have poor reviews and high footfall score highest for entry
+
+- Seasonal demand factors, competition from adjacent entertainment (VR arcades, axe throwing, mini golf, bowling, immersive dining)
+
+---
 
 ### 4. Commercial Real Estate & Location Data (PRIORITY SECTION — provide maximum detail)
 
-**Hard requirements — discard any property or area that does not meet these:**
-- Minimum 2,000 sq ft (anything below is not suitable and must be excluded from the report)
-- Target range: 3,500–6,000 sq ft to comfortably accommodate 4–6 escape rooms plus supporting spaces
-- Room sizing context: each escape room typically requires 250–400 sq ft; 4–6 rooms therefore needs 1,000–2,400 sq ft of playable space, plus reception/waiting area (400–600 sq ft), GM monitoring station, corridors, bathrooms, storage, and staff areas
+**Hard site requirements — discard anything that does not meet these criteria:**
+- Minimum 2,000 sq ft — anything below is excluded from the report entirely
+- Target range: 3,500–6,000 sq ft to accommodate 4–6 rooms plus all supporting spaces
+- Room sizing: each room requires approximately 250–400 sq ft; 4–6 rooms = 1,000–2,400 sq ft playable space, plus reception/waiting area (400–600 sq ft), GM monitoring station, corridors, bathrooms, storage, staff areas
+- Prime location — high footfall, strong visibility, passing trade
+- Reasonable price per sq ft — the report will define what constitutes value vs overpriced for each specific market
 
-**For each of the top recommended cities, provide:**
-- Current average commercial lease rate per sq ft (monthly and annual) — distinguish between Class A, B, and C space
-- What "reasonable" price per sq ft looks like for that specific market vs what would be considered premium/overpriced
-- Specific neighbourhoods, districts, or streets that represent prime locations (high footfall, visibility, passing trade)
-- Proximity factors to prioritise: entertainment districts, restaurants and bars, cinemas, bowling alleys, shopping centres, transport hubs, hotels, tourist attractions
-- Current vacancy rates for suitable commercial space in those areas
-- Any specific properties or developments currently available that match the size criteria (sourced from LoopNet, CoStar, Crexi, or local commercial real estate listings where possible)
-- Parking availability — surface, structured, or street (important for group bookings)
-- Ground floor vs upper floor considerations (ground floor preferred for accessibility and walk-in trade; upper floor may offer lower rates)
+**Mall & Retail Entertainment Centre Opportunities (priority location type — Wendy's proven model):**
+- Specifically identify malls and retail entertainment centres in each recommended city with available or likely available space meeting the size criteria
+- Grade each mall identified: A-grade (premium, high footfall, national anchor tenants), B-grade (solid community mall, good footfall), C-grade (declining, low footfall — avoid unless exceptional deal)
+- Look for malls that already have an entertainment cluster (cinema, bowling, arcade, food court) — co-tenancy with complementary businesses drives cross-pollination of customers
+- Mall-specific lease terms: many mall landlords prefer longer leases (5–10 years) but may offer generous fit-out contributions and rent-free periods for entertainment tenants who drive footfall
+- Assess whether the mall has a dedicated entertainment zone or is actively repositioning toward experience retail (a trend many mall operators are pursuing post-pandemic)
+- Note parking provision — malls typically solve the parking problem, which is a significant advantage for group bookings
+- Inline vs anchor position within the mall: inline units offer passing trade; end-caps and anchor positions offer greater visibility
+
+**For each recommended city, also provide:**
+- Current average commercial lease rate per sq ft (monthly and annual) broken down by Class A, B, and C space
+- What "reasonable" vs "overpriced" means specifically for that market
+- Specific named neighbourhoods, districts, or streets with high footfall beyond malls — entertainment districts, high streets, waterfront areas
+- Proximity priorities: restaurants and bars, cinemas, bowling, shopping centres, transport hubs, hotels, tourist attractions
+- Current vacancy rates for suitable commercial space
+- Specific available properties sourced from LoopNet, CoStar, Crexi, or local commercial listings where possible
+- Ground floor vs upper floor trade-offs
 - Loading access for large props, set dressing, and equipment delivery
-- Fit-out considerations: ceiling height (minimum 9ft recommended), column-free floor plans preferred, power supply capacity
+- Fit-out considerations: ceiling height minimum 9ft, column-free floor plans preferred, adequate power supply for 4–6 simultaneous rooms
 
-**Lease structure intelligence:**
-- Typical lease lengths being offered in this market (3, 5, 10 year terms)
-- Whether landlords in this market are offering rent-free periods or fit-out contributions for quality tenants
+**Lease Structure Intelligence:**
+- Typical lease lengths in this market (3, 5, 10 year terms)
+- Rent-free periods and fit-out contributions available from landlords
 - Triple net (NNN) vs gross lease norms for the state
-- Any tenant improvement allowances typical in this market
+- Tenant improvement allowances typical in this market
+- Enterprise zone incentives or small business grants available to offset real estate costs
 
-**Red flags to flag in the report:**
-- Areas with declining footfall or retail blight
-- Locations where parking is severely limited
+**Red flags:**
+- C-grade or dying malls with declining footfall — cheap rent does not compensate for low passing trade
+- Areas with retail blight or high nearby vacancy rates
+- Severely limited or paid parking
 - Markets where commercial rents have spiked unsustainably in the past 2 years
-- Any enterprise zone incentives or small business grants available in the state that could offset real estate costs
-- Cities within high-outmigration states where the customer base is actively shrinking — reduced long-term market viability
+- Cities within high-outmigration states where the customer base is shrinking
+
+---
 
 ### 5. Regulatory & Operational Environment
-- State business registration requirements
-- Relevant safety codes (fire safety, occupancy limits for immersive venues)
-- Liquor licence availability (relevant for venues offering drinks)
-- State small business support programs or incentives
 
-### 6. Financial Benchmarks
-- Industry average revenue per room per year
-- Typical fit-out/build cost range for this market
-- Estimated break-even timeline
-- Any notable recent escape room openings, closures, or acquisitions in the state
+- State business registration requirements and typical timeline
+- Relevant safety codes: fire safety regulations, occupancy limits, emergency exit requirements for immersive/low-light venues
+- ADA (Americans with Disabilities Act) compliance requirements — note any state-specific requirements that exceed federal standards; assess fit-out cost implications
+- Liquor licence availability and rules — relevant if Wendy wants to add a bar or drinks service
+- **Permitting & Build Timeline:**
+  - How long does it realistically take to get a commercial entertainment venue permitted and open in this state, from lease signing to doors open?
+  - Known bottlenecks: building permits, fire marshal inspections, occupancy certificates
+  - Contractor availability for specialist fit-out work in the recommended cities
+- State small business support programmes, grants, and incentive schemes
+- Any state-specific regulations relevant to escape rooms or immersive entertainment venues (some states have introduced specific rules following safety incidents at escape rooms nationally)
+
+---
+
+### 6. Financial Benchmarks & Operating Costs
+
+- Industry average revenue per escape room per year (national benchmark)
+- Estimated revenue potential for a 4–6 room venue in this specific market based on local pricing and demand
+- Typical venue fit-out and build cost range for this market — distinguish between basic and premium production quality
+- Estimated break-even timeline based on market conditions and realistic occupancy rates
+- Any notable recent escape room openings, closures, or acquisitions in the state — market momentum indicators
+
+- **Labour Market & Staffing Costs:**
+  - State minimum wage — and whether any recommended cities have a higher city-level minimum wage
+  - Average hourly wages for hospitality and entertainment workers in the state and recommended cities
+  - Labour market tightness: is it a candidate-short market that makes hiring difficult, or is there a ready pool of workers?
+  - Typical staffing model for a 4–6 room venue (game masters per room, front-of-house, management) and the estimated annual payroll cost at local wage rates
+  - Whether existing operators appear to face staffing challenges based on their job postings or reviews mentioning staff quality
+
+- **Insurance:**
+  - Estimated commercial liability insurance costs for an immersive entertainment venue in this state
+  - Note if the state has notably higher or lower insurance rates than the national norm
+  - Any specialist escape room or entertainment venue insurance providers operating in this market
+
+- **Technology & Booking Systems:**
+  - What booking and management platforms are the most successful escape room operators in the US using? (Resova, Checkfront, Xola, Fareharbor, Escape Room Master, etc.)
+  - Are there dominant local preferences or norms in this state's market?
+  - Online gift card capability — note if this is a standard expectation among customers in the region (Christmas and birthday gift card revenue can be significant)
+
+- **Ancillary Revenue Potential:**
+  - Realistic estimate of ancillary revenue from corporate packages, private events, merchandise, and photo packages in this market
+  - Gift card market assessment — how active is the gifting culture for experiences in the region?
+
+---
 
 ## Output Instructions
 
-1. Save the completed report as an HTML file at: `reports/escape-room-$ARGUMENTS.html` (use the state name, lowercase, spaces replaced with hyphens — e.g. `escape-room-new-york.html`)
+1. Save the completed report as an HTML file at: `reports/escape-room-$ARGUMENTS.html` (state name lowercase, spaces replaced with hyphens — e.g. `escape-room-new-york.html`)
 
-2. The HTML file must be fully self-contained and print-ready (suitable for PDF conversion via browser print). Use inline CSS only — no external stylesheets or CDN links.
+2. The HTML file must be fully self-contained and print-ready (suitable for PDF via browser print). Use inline CSS only — no external stylesheets or CDN links.
 
-3. Use this structure and styling approach:
-   - Clean, professional layout with a dark header bar (#1a1a2e) and white body
-   - Accent colour: #e94560 (red) for headings and highlights
+3. Report structure and styling:
+   - Dark header bar (#1a1a2e), white body, accent colour #e94560
    - Section cards with light grey backgrounds (#f8f9fa) and subtle box shadows
-   - A clear cover section at the top with: report title, state name, date generated, and "Prepared for: Wendy"
+   - Cover page: report title, state name, date generated, "Prepared for: Wendy"
    - Table of contents with anchor links
-   - Each research section as a clearly labelled card/section
-   - An Executive Summary section at the top (after the cover) that distils the top 5 findings
-   - A "Top Recommended Locations" summary table
-   - A "Key Risks & Considerations" section at the end
-   - Footer with: "Research conducted by Claude AI | $ARGUMENTS Escape Room Market Report | [current date]"
+   - Executive Summary: top 5 findings, any HIGH RISK or HIGH OPPORTUNITY flags prominent at the top
+   - Vancouver, WA benchmark comparison table
+   - Top Recommended Locations summary table
+   - All six research sections as clearly labelled cards
+   - Key Risks & Considerations section at the end
+   - Footer: "Research conducted by Claude AI | $ARGUMENTS Escape Room Market Report | [current date]"
 
-4. After saving the file, confirm the file path and tell the user they can open it in any browser and use File → Print → Save as PDF to generate the PDF version.
+4. After saving, confirm the file path and advise: open in any browser → File → Print → Save as PDF.
 
 ## Quality Standards
-- All claims should be grounded in real, current data found via web search
+- All claims grounded in real, current data found via web search
 - Where exact figures are unavailable, provide clearly labelled estimates with methodology
-- Avoid generic filler — every paragraph should contain actionable, specific intelligence
-- Flag any data that could not be verified with a clear note
-- Aim for a report that reads as if produced by a specialist business consultancy
+- No generic filler — every paragraph must contain actionable, specific intelligence
+- Flag any data that could not be verified
+- Write as if produced by a specialist business consultancy for an experienced operator
