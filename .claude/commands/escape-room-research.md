@@ -27,6 +27,22 @@ Use web search to gather current, accurate data across all of the following area
   - Rainy day / indoor activity demand: states with unpredictable or wet weather see higher demand for indoor entertainment from tourists
   - Flag any cities where tourism is the primary economic driver — these represent captive audiences actively seeking activities
 
+- **Net Migration, Population Movement & Tax Environment (critical viability indicator):**
+  - Net domestic migration figure for the state — how many people are arriving from other US states vs leaving, using the most recent IRS migration data and US Census Bureau figures
+  - Net international migration figure
+  - Overall population growth or decline trend over the past 5 years — is the state expanding or contracting?
+  - State income tax rate — flag if among the highest in the nation; note if the state has no income tax (e.g. Texas, Florida, Nevada — strong attraction for incomers)
+  - State sales tax rate and how it compares nationally
+  - Property tax rates and trend direction
+  - Overall state tax burden ranking — use Tax Foundation State Business Tax Climate Index or similar authoritative source
+  - Any recent tax increases that have coincided with or triggered notable population exodus
+  - Business tax environment — corporation tax rate, any recent changes, and whether major employers have relocated out of the state as a result
+  - Which specific cities within the state are growing vs declining in population
+  - Where people are migrating FROM into this state, and where residents are leaving TO — indicates sentiment and economic confidence
+  - Cost of living index for the state and key cities
+  - **If the state shows consistent net outmigration and a high or rising tax burden, flag the entire state as HIGH RISK and include a clear caution note in the Executive Summary of the report**
+  - If data is unavailable or inconclusive, state this clearly rather than omitting the section
+
 - **University & College Population (high priority indicator):**
   - List all universities and colleges in the state with their city and total enrolled student population
   - Identify the top 5 cities by student population concentration
@@ -98,6 +114,7 @@ Use web search to gather current, accurate data across all of the following area
 - Locations where parking is severely limited
 - Markets where commercial rents have spiked unsustainably in the past 2 years
 - Any enterprise zone incentives or small business grants available in the state that could offset real estate costs
+- Cities within high-outmigration states where the customer base is actively shrinking — reduced long-term market viability
 
 ### 5. Regulatory & Operational Environment
 - State business registration requirements

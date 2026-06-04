@@ -26,11 +26,12 @@ To convert to PDF: open the file in Chrome or Safari → File → Print → Save
 
 ## What the Report Covers
 1. **State Demographics & Market Profile** — population, age distribution,
-   household income, inbound tourism (annual visitor numbers domestic and
-   international, top 10 attractions by visitor count, peak seasons, visitor
-   spend on activities, convention/conference activity), university and college
-   populations (cities with high student concentrations flagged as HIGH
-   OPPORTUNITY markets)
+   household income; net migration and tax burden (states with high outmigration
+   and rising taxes flagged HIGH RISK in the Executive Summary); inbound tourism
+   (annual visitor numbers domestic and international, top 10 attractions by
+   visitor count, peak seasons, visitor spend on activities, convention activity);
+   university and college populations (cities with high student concentrations
+   flagged as HIGH OPPORTUNITY markets)
 2. **Escape Room Market Landscape** — existing venues, franchise presence,
    saturation analysis, underserved cities, pricing benchmarks
 3. **Business Opportunity Assessment** — top 3–5 recommended cities,
