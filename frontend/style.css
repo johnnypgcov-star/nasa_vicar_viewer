@@ -61,6 +61,7 @@ header {
   font-size: .85rem; transition: all .2s;
 }
 .nav-btn:hover, .nav-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+a.nav-btn { text-decoration: none; display: inline-flex; align-items: center; }
 
 /* ── Layout ────────────────────────────────────────────────────────── */
 .view { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; padding: 24px; }
