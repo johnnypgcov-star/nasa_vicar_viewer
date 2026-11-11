@@ -6,6 +6,11 @@ A Docker-based web viewer for NASA Voyager 1 & 2 planetary imagery. Browse live 
 ![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688)
 ![Docker](https://img.shields.io/badge/Docker-port%2085-2496ED)
 ![License](https://img.shields.io/badge/data-public%20domain-green)
+![Code licence](https://img.shields.io/badge/code-MIT-yellow)
+
+![Browsing Voyager 1's approach to Jupiter, March 1979](docs/screenshots/browse-jupiter.png)
+
+![A raw Voyager 1 VICAR frame of Jupiter, decoded in the browser with its full label](docs/screenshots/raw-vicar-jupiter.png)
 
 ---
 
@@ -16,6 +21,8 @@ A Docker-based web viewer for NASA Voyager 1 & 2 planetary imagery. Browse live 
 - **Archive browser** — browse and view files inside `.tar.gz`, `.zip`, and other archives without manual extraction; cached after first open
 - **Upload** — drag-and-drop any `.IMG`, `.VIC`, or `.xml` file for instant parsing and display
 - **Full format support** — VICAR, PDS3, PDS4; BYTE / HALF / FULL / REAL pixel types; BSQ / BIL / BIP organisations; all byte orders
+- **Compressed raw images** — opens Huffman-compressed Voyager and Viking `.IMQ` / `.IBG` files directly (a port of the original PDS CD-ROM decompressor)
+- **More missions** — Viking Orbiter colour-mosaic planes, Viking Lander camera planes, Mariner 10 EBCDIC VICAR tapes, Mariner 6/7 TIFF and New Horizons PNG browse images
 
 ---
 
@@ -81,4 +88,8 @@ All NASA Voyager planetary data is in the public domain.
 
 ---
 
-&copy; 2026 John Gilbert. NASA data is public domain.
+## Licence
+
+The code is released under the [MIT Licence](LICENSE): free to use, modify and redistribute, including by NASA, PDS nodes, universities and museums. NASA image data is public domain.
+
+&copy; 2026 John Gilbert.

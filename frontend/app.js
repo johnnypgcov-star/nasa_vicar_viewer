@@ -845,3 +845,14 @@ document.getElementById("local-root-input").addEventListener("keydown", e => {
 
 generateStars();
 runSearch(1);
+
+// ── Direct links: /?folder=<path under the archive root> opens that folder ──
+(function openFolderFromUrl() {
+  const folder = new URLSearchParams(location.search).get("folder");
+  if (!folder) return;
+  window.addEventListener("load", async () => {
+    showView("local");
+    await initLocalBrowser();
+    showLocalFolder(folder, null);
+  });
+})();

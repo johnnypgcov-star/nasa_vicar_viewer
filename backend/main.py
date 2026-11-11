@@ -285,9 +285,21 @@ def _raw_to_response(raw: bytes, filename: str, cp: Path) -> dict:
 
 VIEWABLE_EXTS: dict[str, str] = {
     ".IMG":   "image",    # VICAR or PDS3 — rendered as PNG
+    ".IMQ":   "image",    # compressed Voyager/Viking EDR — decompressed, rendered as PNG
+    ".IBG":   "image",    # Viking/Voyager browse image (PDS3)
+    ".RED":   "image",    # Viking colour-mosaic filter planes (PDS3)
+    ".GRN":   "image",
+    ".SGR":   "image",
+    ".VIO":   "image",
+    # Viking Lander camera diode planes (PDS3): sun, colour, broadband, infrared, survey
+    **{e: "image" for e in (".SUN", ".BLU", ".BB1", ".BB2", ".BB3", ".BB4",
+                            ".IR1", ".IR2", ".IR3", ".SUR", ".N06", ".N07", ".N15")},
     ".JPG":   "image",    # JPEG browse preview
     ".JPEG":  "image",
     ".GIF":   "image",    # GIF browse preview
+    ".PNG":   "image",    # e.g. New Horizons LORRI browse
+    ".TIF":   "image",    # e.g. Mariner 6/7 browse; converted to PNG for the browser
+    ".TIFF":  "image",
     ".XML":    "pds4",     # PDS4 label + data
     ".ZIP":    "archive",  # ZIP archive
     ".TAR":    "archive",  # TAR archive
@@ -317,7 +329,9 @@ _IMG_TYPE_SUFFIXES = {
 }
 
 TEXT_EXTENSIONS = {".LBL", ".CAT", ".TAB", ".ASC", ".TXT", ".HTM", ".HTML"}
-IMAGE_PASSTHROUGH = {".JPG", ".JPEG", ".GIF"}
+IMAGE_PASSTHROUGH = {".JPG", ".JPEG", ".GIF", ".PNG"}
+PDS3_PLANES = {".IMG", ".IMQ", ".IBG", ".RED", ".GRN", ".SGR", ".VIO", ".SUN", ".BLU", ".BB1", ".BB2",
+               ".BB3", ".BB4", ".IR1", ".IR2", ".IR3", ".SUR", ".N06", ".N07", ".N15"}
 
 
 def _img_subtype(name: str) -> str:
@@ -650,7 +664,7 @@ async def local_view(path: str = Query(...)):
             raise HTTPException(422, f"PDS4 error: {e}")
 
     # ── VICAR / PDS3 image ─────────────────────────────────────────────
-    if ext == ".IMG":
+    if ext in PDS3_PLANES:
         cp = _cache(f"local:{path}")
         png_p = Path(str(cp) + ".png")
         meta_p = Path(str(cp) + ".json")
@@ -687,6 +701,29 @@ async def local_view(path: str = Query(...)):
             "mime_type": _mime(ext),
             "filename": target.name,
             "size_mb": round(len(raw) / 1_048_576, 2),
+        }
+
+    # ── TIFF: browsers can't show it, so convert to PNG ────────────────
+    if ext in (".TIF", ".TIFF"):
+        from PIL import Image
+        import io
+        im = Image.open(target)
+        if im.mode.startswith("I") or im.mode == "F":  # 16-bit / float: stretch to 8-bit
+            import numpy as np
+            a = np.asarray(im, dtype=np.float64)
+            lo, hi = np.percentile(a, (0.5, 99.5))
+            im = Image.fromarray((np.clip((a - lo) / max(hi - lo, 1e-9), 0, 1) * 255).astype(np.uint8))
+        elif im.mode not in ("L", "RGB", "RGBA"):
+            im = im.convert("RGB" if "A" not in im.mode else "RGBA")
+        buf = io.BytesIO()
+        im.save(buf, "PNG")
+        return {
+            "type": "image",
+            "format": "tiff",
+            "data_base64": base64.b64encode(buf.getvalue()).decode(),
+            "mime_type": "image/png",
+            "filename": target.name,
+            "size_mb": round(target.stat().st_size / 1_048_576, 2),
         }
 
     # ── Text / metadata files ──────────────────────────────────────────

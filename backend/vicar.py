@@ -31,7 +31,11 @@ def detect_format(data: bytes) -> str:
     head = data[:512].decode("ascii", errors="replace")
     if re.search(r"LBLSIZE\s*=", head):
         return "vicar"
-    if re.search(r"PDS_VERSION_ID\s*=\s*PDS3", head):
+    if data[:2] == b"\xf7\xf7" and len(data) % 968 == 0:
+        return "mariner10"  # 1970s IBM VICAR tape image, EBCDIC label
+    if b"HUFFMAN_FIRST_DIFFERENCE" in data[:8192]:
+        return "pds3_huffman"  # compressed Voyager/Viking EDR (.IMQ)
+    if re.search(r"PDS_VERSION_ID\s*=\s*PDS3", head) or "SFDU_LABEL" in head:
         return "pds3"
     if data[:5] in (b"<?xml", b"<Prod") or b"PDS4" in data[:256]:
         return "pds4"
@@ -45,6 +49,10 @@ def parse_any_image(data: bytes) -> tuple[bytes, dict]:
         return vicar_to_png_bytes(data)
     if fmt == "pds3":
         return pds3_to_png_bytes(data)
+    if fmt == "pds3_huffman":
+        return huffman_to_png_bytes(data)
+    if fmt == "mariner10":
+        return mariner10_to_png_bytes(data)
     raise ValueError(f"Cannot parse image: unrecognised format ({fmt})")
 
 
@@ -325,4 +333,64 @@ def pds3_to_png_bytes(data: bytes) -> tuple[bytes, dict]:
         "data_offset": data_offset,
         "image_format": "pds3",
         "raw_label": all_params,
+    }
+
+
+# ── Compressed Voyager / Viking EDR (.IMQ) ────────────────────────────────────
+
+def huffman_to_png_bytes(data: bytes) -> tuple[bytes, dict]:
+    """Decompress a Huffman first-difference PDS image (.IMQ) → (PNG bytes, metadata)."""
+    import imq
+    nl, ns, pixels, label = imq.decode(data)
+    arr = np.frombuffer(pixels, dtype=np.uint8).reshape(nl, ns)
+    m = re.search(r"SAMPLE_BIT_MASK\s*=\s*2#([01]+)#", label)
+    if m:
+        arr = arr & np.uint8(int(m.group(1), 2))
+    # Viking frames sent in "every 7th pixel dropped" mode have all-zero columns;
+    # fill those from their neighbours for display (originals are untouched).
+    zero = set(np.where((arr[nl // 8: -nl // 8] == 0).mean(axis=0) > 0.9)[0].tolist())
+    if 0 < len(zero) < ns // 3:
+        f = arr.astype(np.float32)
+        for c in zero:
+            if 0 < c < ns - 1 and c - 1 not in zero and c + 1 not in zero:
+                f[:, c] = (f[:, c - 1] + f[:, c + 1]) / 2
+        arr = f
+    top = {}
+    for line in label.splitlines():
+        k, sep, v = line.partition("=")
+        if sep and not line.startswith(" "):
+            top[k.strip()] = v.strip().strip("'\"")
+    return _to_png(Image.fromarray(_normalize_array(arr), "L")), {
+        "nl": nl, "ns": ns, "nb": 1,
+        "format": "PDS3/HUFFMAN_FIRST_DIFFERENCE (decompressed)",
+        "sample_bits": 8,
+        "image_format": "pds3",
+        "raw_label": top,
+    }
+
+
+# ── Mariner 10 (IBM VICAR, EBCDIC label) ─────────────────────────────────────
+
+def mariner10_to_png_bytes(data: bytes) -> tuple[bytes, dict]:
+    """Mariner 10 EDR: one 968-byte EBCDIC label record, then 700 lines of
+    832 pixels followed by 136 bytes of engineering data."""
+    rec, ns = 968, 832
+    nl = len(data) // rec - 1
+    label = data[:rec].decode("cp500", errors="replace")
+    label = label[:label.find("C�")] if "C�" in label else label[:600]
+    arr = np.frombuffer(data[rec:rec * (nl + 1)], np.uint8).reshape(nl, rec)[:, :ns]
+    top = {}
+    for key in ("FDS", "CAMERA", "FILTER", "NOMINAL EXPOSURE"):
+        m = re.search(key + r"=\s*(\S+(?: \S+)?)", label)
+        if m:
+            top[key] = m.group(1)
+    m = re.search(r"ERT\s+YR=(\d+) DAY=(\d+) GMT=(\S+)", label)
+    if m:
+        top["EARTH_RECEIVED"] = f"19{m.group(1)} day {m.group(2)} {m.group(3)} UT"
+    return _to_png(Image.fromarray(_normalize_array(arr), "L")), {
+        "nl": nl, "ns": ns, "nb": 1,
+        "format": "Mariner 10 VICAR (EBCDIC)",
+        "sample_bits": 8,
+        "image_format": "vicar",
+        "raw_label": top,
     }

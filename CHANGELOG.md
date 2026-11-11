@@ -4,6 +4,20 @@ All notable changes to NASA VICAR Viewer are documented here.
 
 ---
 
+## [1.2.0] — 2026-11-11
+
+### Added
+
+- **Compressed Voyager / Viking EDR images (`.IMQ`, `.IBG`)**: a Python port of the original PDS CD-ROM Huffman first-difference decompressor (DECOMP.C, Kris Becker, USGS 1988), so the raw compressed files open directly
+- **Viking Orbiter colour-mosaic filter planes** (`.RED`, `.GRN`, `.SGR`, `.VIO`) and **Viking Lander camera diode planes** (`.SUN`, `.BLU`, `.BB1`–`.BB4`, `.IR1`–`.IR3`, `.SUR`, `.N06`, `.N07`, `.N15`)
+- **Mariner 10 EDR images**: 1970s IBM VICAR tape format with EBCDIC labels
+- **TIFF** browse images (e.g. Mariner 6/7), converted to PNG; 16-bit/float TIFFs are contrast-stretched
+- **PNG** passthrough (e.g. New Horizons LORRI browse)
+- Direct links: `/?folder=<path>` opens that folder in the Local Files browser
+- MIT licence, screenshots
+
+---
+
 ## [1.1.0] — 2026-05-06
 
 Initial public release.
